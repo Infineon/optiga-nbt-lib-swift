@@ -1,0 +1,48 @@
+# SPDX-FileCopyrightText: 2024 Infineon Technologies AG
+#
+# SPDX-License-Identifier: CC0-1.0
+
+##############################
+## Java
+##############################
+.mtj.tmp/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+
+##############################
+## Gradle
+##############################
+bin/
+build/
+.gradle
+.gradletasknamecache
+gradle-app.setting
+!gradle-wrapper.jar
+
+##############################
+## Visual Studio Code
+##############################
+.vscode/
+.code-workspace
+/.idea/.gitignore
+/.idea/.name
+/.idea/compiler.xml
+/.idea/gradle.xml
+/.idea/jarRepositories.xml
+/.idea/misc.xml
+/.idea/vcs.xml
+
+##############################
+## Swift
+##############################
+.jenkins
+.build
+.swiftpm
+.releng/code
+.releng/documentation
+.releng/nbt-*
+.DS_Store
