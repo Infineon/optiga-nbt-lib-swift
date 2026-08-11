@@ -1,5 +1,4 @@
-// SPDX-FileCopyrightText: 2024 Infineon Technologies AG
-//
+// SPDX-FileCopyrightText: Copyright (c) 2024-2026 Infineon Technologies AG
 // SPDX-License-Identifier: MIT
 
 import Foundation
@@ -8,7 +7,7 @@ import Foundation
  *  NFC Data Exchange Format (NDEF) Record.
  *   Contains the Following parameters or fields
  *
- *  **Payload Length** :  Regardless of the relationship of the record to other record, 
+ *  **Payload Length** :  Regardless of the relationship of the record to other record,
  *  the Payload length always indicated the length of the payload encapsulated in this record.
  *
  *  **Payload Type**:  The Payload  Type of a record indicates the

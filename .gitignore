@@ -1,5 +1,4 @@
-# SPDX-FileCopyrightText: 2024 Infineon Technologies AG
-#
+# SPDX-FileCopyrightText: Copyright (c) 2024-2026 Infineon Technologies AG
 # SPDX-License-Identifier: CC0-1.0
 
 ##############################
@@ -39,10 +38,6 @@ gradle-app.setting
 ##############################
 ## Swift
 ##############################
-.jenkins
 .build
 .swiftpm
-.releng/code
-.releng/documentation
-.releng/nbt-*
 .DS_Store

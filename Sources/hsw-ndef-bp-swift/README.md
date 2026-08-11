@@ -1,6 +1,11 @@
+<!--
+SPDX-FileCopyrightText: Copyright (c) 2024-2026 Infineon Technologies AG
+SPDX-License-Identifier: CC-BY-4.0
+-->
+
 # NFC brand protection record swift library
 
-The NFC brand protection record library is an extension to the NDEF Swift library to create and parse the OPTIGA&trade; Authenticate NBT's brand protection record.
+The NFC brand protection record library is an extension to the NDEF Swift library to create and parse the OPTIGA™ Authenticate NBT's brand protection record.
 
 The record type URN is `urn:nfc:ext:infineon.com:nfc-bridge-tag.x509`.
 
@@ -64,15 +69,15 @@ This record allows passing x509 certificate in the payload. The x509 certificate
 
 This image shows the software architecture of the library.
 
-<img src="./docs/images/hsw-ndef-bp-swift-architecture.png" width="500"/>
+![Software architecture](./docs/images/hsw-ndef-bp-swift-architecture.png)
 
 ## Components
 
-* **Brand protection record type definitions**
+- **Brand protection record type definitions**
 
-    These record type definitions (RTD) can be used to build the brand protection record. 
+    These record type definitions (RTD) can be used to build the brand protection record.
 
-* **Brand protection record payload encoder & decoder**
+- **Brand protection record payload encoder & decoder**
 
     The encoder and decoder component contains the Brand Protection payload encoder and decoder, which can be used to encode and decode the payload details into a byte array.
 
@@ -80,7 +85,7 @@ This image shows the software architecture of the library.
 
 This UML sequence diagram describes the interaction between the components.
 
-<img src="./docs/images/hsw-ndef-bp-swift-interaction.png" width="800"/>
+![NBT APDU Swift library interaction](./docs/images/hsw-ndef-bp-swift-interaction.png)
 
 ## Directory structure
 
@@ -99,16 +104,16 @@ hsw-ndef-bp-swift
 
 ## Dependencies
 
-* **hsw-ndef-swift**
+- **hsw-ndef-swift**
 
     This dependent library creates and parses the NDEF records and messages.
 
-* **apple/swift-docc-plugin**
+- **apple/swift-docc-plugin**
 
     This dependent library supports building documentation for the Swift library.
 
 ## References
 
-* Infineon Technologies AG: *OPTIGA&trade; Authenticate NBT, Extended Datasheet*
-* NFC Data Exchange Format (NDEF), Technical Specification, NFC Forum™, NDEF 1.0
-* NFC Record Type Definition (RTD), Technical Specification, NFC Forum™, RTD 1.0
+- Infineon Technologies AG: *OPTIGA™ Authenticate NBT, Extended Datasheet*
+- NFC Data Exchange Format (NDEF), Technical Specification, NFC Forum™, NDEF 1.0
+- NFC Record Type Definition (RTD), Technical Specification, NFC Forum™, RTD 1.0

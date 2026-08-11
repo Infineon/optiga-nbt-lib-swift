@@ -1,5 +1,4 @@
-// SPDX-FileCopyrightText: 2024 Infineon Technologies AG
-//
+// SPDX-FileCopyrightText: Copyright (c) 2024-2026 Infineon Technologies AG
 // SPDX-License-Identifier: MIT
 
 import Foundation
@@ -287,8 +286,7 @@ public class NbtApduResponse: ApduResponse {
     /// - Parameter ins: Instruction code for which the response is generated.
     ///
     private func checkSWError(ins: UInt8) {
-        if getSW() == ApduResponse.swNoError // isSuccessSW() can be used
-        {
+        if getSW() == ApduResponse.swNoError { // isSuccessSW() can be used
             error = NbtConstants.emptyString
         } else {
             if let errorData: String = NbtApduResponse.errorMap[String(ins) +

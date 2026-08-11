@@ -1,5 +1,4 @@
-// SPDX-FileCopyrightText: 2024 Infineon Technologies AG
-//
+// SPDX-FileCopyrightText: Copyright (c) 2024-2026 Infineon Technologies AG
 // SPDX-License-Identifier: MIT
 
 import Foundation
@@ -25,7 +24,7 @@ public class AppletVersion {
 
     /// Build number in file control information.
     private var buildNumber: UInt16 = .init()
-    
+
     /// Error message for invalid applet version
     private static let errInvalidAppletVersion = "Failed to parse applet version data"
 

@@ -1,5 +1,4 @@
-// SPDX-FileCopyrightText: 2024 Infineon Technologies AG
-//
+// SPDX-FileCopyrightText: Copyright (c) 2024-2026 Infineon Technologies AG
 // SPDX-License-Identifier: MIT
 
 import Foundation
@@ -35,10 +34,11 @@ public class ErrorRecordPayloadDecoder: IRecordPayloadDecoder {
 
             let errorDataFieldLength = payload.count - 1
 
-            let errorRecord = try ErrorRecord(errorReason: Utils.getUInt8WithIndex(index: errorReasonFieldIndex, data: payload),
-                                   errorData: Utils.getDataFromStream(
-                                       length: errorDataFieldLength, data: payload,
-                                       index: &errorDataFieldStartIndex))
+            let errorRecord = try ErrorRecord(
+                errorReason: Utils.getUInt8WithIndex(index: errorReasonFieldIndex, data: payload),
+                errorData: Utils.getDataFromStream(
+                    length: errorDataFieldLength, data: payload,
+                    index: &errorDataFieldStartIndex))
             NdefManager.getLogger()?.info(header: headerTag, message: "Payload decoded successfully.")
             return errorRecord
 

@@ -1,5 +1,4 @@
-// SPDX-FileCopyrightText: 2024 Infineon Technologies AG
-//
+// SPDX-FileCopyrightText: Copyright (c) 2024-2026 Infineon Technologies AG
 // SPDX-License-Identifier: MIT
 
 import Foundation
@@ -12,7 +11,7 @@ public class UtilsError: Error {
     /// Creates a new Utils Error with the specified description.
     ///
     /// - Parameter description: The description of the error.
-    /// 
+    ///
     public init(description: String) {
         self.localizedDescription = description
     }

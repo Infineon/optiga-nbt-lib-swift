@@ -1,5 +1,4 @@
-// SPDX-FileCopyrightText: 2024 Infineon Technologies AG
-//
+// SPDX-FileCopyrightText: Copyright (c) 2024-2026 Infineon Technologies AG
 // SPDX-License-Identifier: MIT
 
 import Foundation
@@ -27,7 +26,7 @@ public class TlvParser {
 
     /// Bit string TLV structure
     static let bitString = "BIT STRING"
-    
+
     /// Octet string TLV structure
     static let octetString = "OCTET STRING"
 
@@ -153,7 +152,7 @@ public class TlvParser {
     /// available in the structure.
     ///
     public func parseValue(length: Int) throws -> Data {
-        
+
         try checkLength(length: length)
         offset += length
         let range = (offset - length)..<offset

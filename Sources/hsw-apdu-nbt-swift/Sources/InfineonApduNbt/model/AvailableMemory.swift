@@ -1,5 +1,4 @@
-// SPDX-FileCopyrightText: 2024 Infineon Technologies AG
-//
+// SPDX-FileCopyrightText: Copyright (c) 2024-2026 Infineon Technologies AG
 // SPDX-License-Identifier: MIT
 
 import Foundation
@@ -25,7 +24,7 @@ public class AvailableMemory {
     /// Available transient of clear on deselect type memory in the available
     /// memory.
     private var availableTransientCod: UInt16 = .init()
-    
+
     /// Error message for invalid memory data
     private let errInvalidMemoryData = "Failed to parse available memory data"
 

@@ -1,3 +1,8 @@
+<!--
+SPDX-FileCopyrightText: Copyright (c) 2024-2026 Infineon Technologies AG
+SPDX-License-Identifier: CC-BY-4.0
+-->
+
 # Logger Swift Library
 
 This library implements the ILogger protocol to log messages in a binary compressed format, deferring much of the work to turn them into human-readable text messages. Using a binary format allows the log system to store more messages and reduces the overhead of logging data.
@@ -16,49 +21,49 @@ public class ExampleLogger: ILogger {
 
     public func error(header: String, message: String) {
         if loggerLevel >= LoggerLevel.error.rawValue {
-            // TODO: Implement the logging functionality
+            // Implement the logging functionality
         }
     }
 
     public func error(header: String, data: Data) {
         if loggerLevel >= LoggerLevel.error.rawValue {
-            // TODO: Implement the logging functionality
+            // Implement the logging functionality
         }
     }
 
     public func warning(header: String, message: String) {
         if loggerLevel >= LoggerLevel.warning.rawValue {
-            // TODO: Implement the logging functionality
+            // Implement the logging functionality
         }
     }
 
     public func warning(header: String, data: Data) {
         if loggerLevel >= LoggerLevel.warning.rawValue {
-            // TODO: Implement the logging functionality
+            // Implement the logging functionality
         }
     }
 
     public func info(header: String, message: String) {
         if loggerLevel >= LoggerLevel.info.rawValue {
-            // TODO: Implement the logging functionality
+            // Implement the logging functionality
         }
     }
 
     public func info(header: String, data: Data) {
         if loggerLevel >= LoggerLevel.info.rawValue {
-            // TODO: Implement the logging functionality
+            // Implement the logging functionality
         }
     }
 
     public func debug(header: String, message: String) {
         if loggerLevel >= LoggerLevel.debug.rawValue {
-            // TODO: Implement the logging functionality
+            // Implement the logging functionality
         }
     }
 
     public func debug(header: String, data: Data) {
         if loggerLevel >= LoggerLevel.debug.rawValue {
-            // TODO: Implement the logging functionality
+            // Implement the logging functionality
         }
     }
 
@@ -70,5 +75,3 @@ public class ExampleLogger: ILogger {
 }
 
 ```
-
-

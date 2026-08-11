@@ -1,5 +1,4 @@
-// SPDX-FileCopyrightText: 2024 Infineon Technologies AG
-//
+// SPDX-FileCopyrightText: Copyright (c) 2024-2026 Infineon Technologies AG
 // SPDX-License-Identifier: MIT
 
 import Foundation
@@ -61,7 +60,7 @@ public class NbtCommandSet: ApduCommandSet {
         "Unblock Password"
 
     private let errInvalidApduResponse = "Invalid Apdu Response"
-    
+
     /// Private tag for the logger message header
     private let headerTag = "NbtCommandSet"
 
@@ -131,8 +130,7 @@ public class NbtCommandSet: ApduCommandSet {
     ///
     public func selectFile(fileId: UInt16,
                            readPassword: Data?,
-                           writePassword: Data?) async throws -> NbtApduResponse
-    {
+                           writePassword: Data?) async throws -> NbtApduResponse {
         getLogger()?.debug(header: headerTag, message: NbtCommandSet.logMessageSelectFile)
         return try await send(command: nbtCommandBuilder.selectFile(fileId: fileId,
                                                                     readPasswordBytes: readPassword,
@@ -517,8 +515,7 @@ public class NbtCommandSet: ApduCommandSet {
     ///
     public func updateFapBytes(fileId: UInt16,
                                policyBytes: Data,
-                               masterPassword: Data?) async throws -> NbtApduResponse
-    {
+                               masterPassword: Data?) async throws -> NbtApduResponse {
         var apduResponse: NbtApduResponse
 
         try nbtCommandBuilder.validatePolicyBytes(policyBytes: policyBytes)
@@ -603,8 +600,7 @@ public class NbtCommandSet: ApduCommandSet {
     /// if unable to get access condition bytes.
     ///
     public func updateFap(fapPolicy: FileAccessPolicy,
-                          masterPassword: Data?) async throws -> NbtApduResponse
-    {
+                          masterPassword: Data?) async throws -> NbtApduResponse {
         return try await updateFapBytes(fileId: fapPolicy.getFileId(),
                                         policyBytes: fapPolicy.getAccessBytes(),
                                         masterPassword: masterPassword)

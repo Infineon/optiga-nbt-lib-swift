@@ -1,0 +1,25 @@
+# SPDX-FileCopyrightText: Copyright (c) 2026 Infineon Technologies AG
+# SPDX-License-Identifier: MIT
+
+name: Swift build
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: macos-15
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          submodules: recursive
+
+      - name: Show Xcode and Swift versions
+        run: |
+          xcode-select -p
+          xcodebuild -version
+          xcrun swift --version
+          swift --version
+
+      - name: Build
+        run: swift build

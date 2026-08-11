@@ -1,5 +1,4 @@
-// SPDX-FileCopyrightText: 2024 Infineon Technologies AG
-//
+// SPDX-FileCopyrightText: Copyright (c) 2024-2026 Infineon Technologies AG
 // SPDX-License-Identifier: MIT
 
 import Foundation
@@ -72,7 +71,7 @@ public class ApduCommand {
     ///   - param2: Parameter byte 2
     ///   - data: Command data
     ///   - lengthExpected: Expected response data length. The leAny (256) constant sets
-    ///   the Le byte to 0x00 in ``ApduCommand``. If leAbsent (0x00) constant, 
+    ///   the Le byte to 0x00 in ``ApduCommand``. If leAbsent (0x00) constant,
     ///   the Le byte will not be present in the ``ApduCommand``
     ///
     ///   - Throws : ``ApduError`` if command data cannot be converted into a byte stream.

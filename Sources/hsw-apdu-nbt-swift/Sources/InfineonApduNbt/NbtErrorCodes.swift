@@ -1,5 +1,4 @@
-// SPDX-FileCopyrightText: 2024 Infineon Technologies AG
-//
+// SPDX-FileCopyrightText: Copyright (c) 2024-2026 Infineon Technologies AG
 // SPDX-License-Identifier: MIT
 
 import Foundation
@@ -291,7 +290,7 @@ public final class NbtErrorCodes {
     /// Incorrect class byte is not supported.
     public static let errInvalidClaConfiguration: String =
         "Incorrect CLA, CLA value not supported"
-    
+
     /// Private constructor to restrict access
     private init() {
         // Private constructor

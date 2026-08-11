@@ -1,5 +1,4 @@
-// SPDX-FileCopyrightText: 2024 Infineon Technologies AG
-//
+// SPDX-FileCopyrightText: Copyright (c) 2024-2026 Infineon Technologies AG
 // SPDX-License-Identifier: MIT
 
 import Foundation
@@ -116,8 +115,7 @@ open class ApduCommandSet {
     /// - Throws: ``ApduError`` in case of communication problems or if
     /// command object cannot be converted into a byte stream.
     ///
-    open func send(apduCommand: Any) async throws -> ApduResponse
-    {
+    open func send(apduCommand: Any) async throws -> ApduResponse {
         if let command = apduCommand as? ApduCommand {
             return try await apduChannel.send(apduCommand: command)
         } else {

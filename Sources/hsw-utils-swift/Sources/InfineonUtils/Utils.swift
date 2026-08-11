@@ -1,5 +1,4 @@
-// SPDX-FileCopyrightText: 2024 Infineon Technologies AG
-//
+// SPDX-FileCopyrightText: Copyright (c) 2024-2026 Infineon Technologies AG
 // SPDX-License-Identifier: MIT
 
 import Foundation
@@ -8,7 +7,7 @@ import Foundation
 public enum Utils {
     /// Default delimiter
     private static let space: String = " "
-    
+
     /// Error message illegal character in hex
     private static let errIllegalCharacter = "Illegal character in hex string"
 
@@ -26,8 +25,7 @@ public enum Utils {
     public static func toString(data: Data, offset: Int, length: Int) throws -> String {
         var description = ""
 
-        if offset + length > data.count
-        {
+        if offset + length > data.count {
             throw UtilsError(description: "Offset + Length is greater than total count")
         }
 
@@ -138,15 +136,15 @@ public enum Utils {
         if let data = stream as? Data {
             return data
         }
-        
+
         if let data = stream as? [Data] {
             var streamData: Data  = Data()
-            for i in data {
-                streamData.append(i)
+            for chunk in data {
+                streamData.append(chunk)
             }
             return streamData
         }
-        
+
         // check if TLV object
         if let tlv = stream as? Tlv {
             return try tlv.toData()
@@ -481,7 +479,7 @@ public enum Utils {
     /// - Throws: ``UtilsError`` in case of error.
     ///
     public static func getUInt8WithIndex(index: Int,
-                                data: Data) throws -> UInt8 {
+                                         data: Data) throws -> UInt8 {
         if index < data.count {
             return data[index]
         } else {

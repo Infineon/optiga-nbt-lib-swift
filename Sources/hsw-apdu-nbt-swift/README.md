@@ -1,19 +1,24 @@
+<!--
+SPDX-FileCopyrightText: Copyright (c) 2024-2026 Infineon Technologies AG
+SPDX-License-Identifier: CC-BY-4.0
+-->
+
 # NBT APDU Swift library
 
-> Swift library to communicate using APDUs with the OPTIGA&trade; Authenticate NBT
+> Swift library to communicate using APDUs with the OPTIGA™ Authenticate NBT
 
-The NBT APDU Swift library allows the iOS application to send C-APDUs and receive R-APDUs from the OPTIGA&trade; Authenticate NBT.
+The NBT APDU Swift library allows the iOS application to send C-APDUs and receive R-APDUs from the OPTIGA™ Authenticate NBT.
 This library can be used with any communication channel, such as NFC and PCSC.
 
 ## Features
 
-* Supports personalization and operational commands of OPTIGA&trade; Authenticate NBT applet
-* Configuration of OPTIGA&trade; Authenticate NBT via its configurator applet
-* Extensible for any communication channel such as NFC and PCSC
+- Supports personalization and operational commands of OPTIGA™ Authenticate NBT applet
+- Configuration of OPTIGA™ Authenticate NBT via its configurator applet
+- Extensible for any communication channel such as NFC and PCSC
 
 ## Features not supported
 
-* Pass-through APDUs
+- Pass-through APDUs
 
 ## Usage
 
@@ -30,10 +35,6 @@ This library can be used with any communication channel, such as NFC and PCSC.
 
     Refer to `hsw-logger-swift/README.md` example section for creating a logger.
 
-    ```swift
-    //TODO: Implement example logger 
-    ```
-
     Initialize the created logger.
 
     ```swift
@@ -47,18 +48,18 @@ This library can be used with any communication channel, such as NFC and PCSC.
 
     Refer to `hsw-channel-swift/README.md` example section for creating a communication channel interface.
 
-    ```swift 
+    ```swift
     // Implement example communication channel interface(e.g PCSC, NFC)
     // Code placeholder
     ```
 
-    Initialize the created communication channel. 
+    Initialize the created communication channel.
 
-    ```swift 
+    ```swift
     // Initialize the Channel interface
     let exampleChannel = ExampleChannel()
     // Initialize the APDU channel with communication channel and logger
-    let apduChannel =  ApduChannel(channel : ctkChannel, logger: exampleLogger) 
+    let apduChannel =  ApduChannel(channel : ctkChannel, logger: exampleLogger)
     ```
 
 4. Initialize the command set
@@ -67,11 +68,11 @@ This library can be used with any communication channel, such as NFC and PCSC.
     // Create an instance of the NBT APDU command set
     let commandSet = try NbtCommandSet(channel: apduChannel)
 
-    // Connect to the OPTIGA&trade; Authenticate NBT (It can return empty data)
+    // Connect to the OPTIGA™ Authenticate NBT (It can return empty data)
     _ = try await apduChannel.connect(data: nil)
     ```
 
-5. Communicate with the OPTIGA&trade; Authenticate NBT
+5. Communicate with the OPTIGA™ Authenticate NBT
 
     ```swift
     do {
@@ -88,7 +89,7 @@ This library can be used with any communication channel, such as NFC and PCSC.
     _ = try apduResponse.checkOK()
     //Log the Apdu response
     exampleLogger.info(header: "APDU response", data: apduResponse.getData())
-    
+
     let expectedLen: UInt16 = 0x10
     let offset: UInt16 = 0x0000
     apduResponse = try await commandSet.readBinary(offset: offset, expectedLen: expectedLen)
@@ -104,26 +105,26 @@ This library can be used with any communication channel, such as NFC and PCSC.
 
 ## Architecture
 
-This image shows the software architecture of the library. 
+This image shows the software architecture of the library.
 
-<img src="./docs/images/hsw-apdu-nbt-swift-architecture.png" width="600"/>
+![NBT APDU Swift library architecture](./docs/images/hsw-apdu-nbt-swift-architecture.png)
 
 ## Components
 
-* **Command set**
-    This command set acts as the API interface for the iOS application. This module is responsible for coordinating the building of APDU commands, sending the commands to the secure element through the communication interface, and receiving response from the secure element. 
+- **Command set**
+    This command set acts as the API interface for the iOS application. This module is responsible for coordinating the building of APDU commands, sending the commands to the secure element through the communication interface, and receiving response from the secure element.
 
-* **Command builder**
-    The command builder helps in framing the command APDUs according to the OPTIGA&trade; Authenticate NBT applet specification. 
+- **Command builder**
+    The command builder helps in framing the command APDUs according to the OPTIGA™ Authenticate NBT applet specification.
 
-* **Response parser**
-    The response parser helps in decoding the response APDUs including response data and status word according to the OPTIGA&trade; Authenticate NBT applet specification. 
+- **Response parser**
+    The response parser helps in decoding the response APDUs including response data and status word according to the OPTIGA™ Authenticate NBT applet specification.
 
 ## Interaction
 
 This UML sequence diagram describes the interaction between the components.
 
-<img src="./docs/images/hsw-apdu-nbt-swift-interaction.png" width="1000"/>
+![NBT APDU Swift library interaction](./docs/images/hsw-apdu-nbt-swift-interaction.png)
 
 ## Directory structure
 
@@ -142,13 +143,13 @@ hsw-apdu-nbt-swift
 
 ## Dependencies
 
-* **hsw-apdu-swift**
+- **hsw-apdu-swift**
     The APDU Swift library helps in building the APDU command bytes and parses the APDU response bytes according to the ISO/IEC 7816-4 specification.
-* **hsw-utils-swift**
-    The utilities library provides the utility methods such as byte conversions, string conversions, and bit operations. 
-* **apple/swift-docc-plugin**
+- **hsw-utils-swift**
+    The utilities library provides the utility methods such as byte conversions, string conversions, and bit operations.
+- **apple/swift-docc-plugin**
     This dependent library supports building documentation for the Swift library.
 
 ## References
 
-- Infineon Technologies AG: *OPTIGA&trade; Authenticate NBT, Extended Datasheet*
+- Infineon Technologies AG: *OPTIGA™ Authenticate NBT, Extended Datasheet*

@@ -1,5 +1,4 @@
-// SPDX-FileCopyrightText: 2024 Infineon Technologies AG
-//
+// SPDX-FileCopyrightText: Copyright (c) 2024-2026 Infineon Technologies AG
 // SPDX-License-Identifier: MIT
 
 import Foundation
@@ -13,7 +12,7 @@ public class AlternativeCarrierRecordPayloadDecoder: IRecordPayloadDecoder {
     /// Error message if unable to decode the Auxiliary data reference.
     private let invalidAuxiliaryData =
         "Unable to read Auxiliary data reference"
-    
+
     /// Private tag for the logger message header
     private let headerTag = "AlternativeCarrierRecordPayloadDecoder"
 

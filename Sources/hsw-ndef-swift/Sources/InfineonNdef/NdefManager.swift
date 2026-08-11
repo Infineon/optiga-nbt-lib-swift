@@ -1,5 +1,4 @@
-// SPDX-FileCopyrightText: 2024 Infineon Technologies AG
-//
+// SPDX-FileCopyrightText: Copyright (c) 2024-2026 Infineon Technologies AG
 // SPDX-License-Identifier: MIT
 
 import Foundation
@@ -15,7 +14,7 @@ public final class NdefManager {
     private static let recordDecoder = RecordDecoder()
 
     /// Private instance of the logger for logging different levels of messages.
-    private static var logger:ILogger? = nil
+    private static var logger: ILogger?
 
     /// Creates an NDEF message along with ``NdefRecord`` using the raw byte array data.
     ///
@@ -122,12 +121,12 @@ public final class NdefManager {
         RecordType) -> IRecordPayloadDecoder? {
         return RecordUtils.getPayloadDecoder(recordType: recordType)
     }
-    
+
     /// Sets the instance of logger
     ///
     /// - Parameter logger: Logger to log different levels of messages
-    /// 
-    public static func setLogger(logger:ILogger){
+    ///
+    public static func setLogger(logger: ILogger) {
         self.logger = logger
     }
 

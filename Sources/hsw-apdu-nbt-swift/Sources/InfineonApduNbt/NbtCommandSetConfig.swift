@@ -1,5 +1,4 @@
-// SPDX-FileCopyrightText: 2024 Infineon Technologies AG
-//
+// SPDX-FileCopyrightText: Copyright (c) 2024-2026 Infineon Technologies AG
 // SPDX-License-Identifier: MIT
 
 import Foundation
@@ -19,16 +18,16 @@ public class NbtCommandSetConfig: ApduCommandSet {
     /// Logs a get configurator message.
     private static let logMessageGetConfigurator: String =
         "Get data"
-    
+
     /// Error message for invalid response
     private let errInvalidResponse = "Invalid Response"
-    
+
     /// Error message if unable to read tag data
     private let errUnableToReadTagData = "Could not read tag data, command returned error SW"
 
     /// Private tag for the logger message header
     private let headerTag = "NbtCommandSetConfig"
-    
+
     /// Instance of configuration command builder for NBT application.
     private var commandBuilderConfig: NbtCommandBuilderConfig = .init()
 
