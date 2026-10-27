@@ -19,7 +19,7 @@ In smart card applications a host typically sends binary `APDU` data to a secure
     import InfineonLogger
     ```
 
-2. Create a logger
+1. Create a logger
 
     refers to `hsw-logger-swift/README.md` example section for creating a logger
 
@@ -32,7 +32,7 @@ In smart card applications a host typically sends binary `APDU` data to a secure
     exampleLogger.setLogLevel(loggerLevel: LoggerLevel.info)
     ```
 
-3. Create a communication channel
+1. Create a communication channel
 
     refers to `hsw-channel-swift/README.md` example section for creating a communication channel
 
@@ -49,7 +49,7 @@ In smart card applications a host typically sends binary `APDU` data to a secure
     let apduChannel = ApduChannel(channel : exampleChannel, logger: exampleLogger)
     ```
 
-4. Initialize the command set
+1. Initialize the command set
 
     ```swift
     let aid = Data([0xd2, 0x76, 0x00, 0x00, 0x85, 0x01, 0x01])

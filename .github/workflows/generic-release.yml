@@ -10,7 +10,7 @@ on:
 
 jobs:
   release:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       contents: write
     steps:
@@ -35,7 +35,7 @@ jobs:
             in_section { print }
           ' CHANGELOG.md | tee _changelog_section.md
       - name: Create release in release tabs on GitHub
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           body_path: _changelog_section.md
           files: |

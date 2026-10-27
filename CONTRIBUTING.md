@@ -78,7 +78,7 @@ steps in advance to help us fix any potential bug as fast as possible.
 - Can you reliably reproduce the issue? And can you also reproduce it with older
   versions?
 
-#### How do I submit a good bug report?
+#### How to submit a good bug report
 
 > You must never report security related issues, vulnerabilities or bugs
 > including sensitive information to the issue tracker, or elsewhere in public.
@@ -130,7 +130,7 @@ community to understand your suggestion and find related suggestions.
   to the majority of our users and not just a small subset. If you're just
   targeting a minority of users, consider writing an add-on/plugin library.
 
-#### How do I submit a good enhancement suggestion?
+#### How to submit a good enhancement suggestion
 
 Enhancement suggestions are tracked as [GitHub
 issues](https://github.com/Infineon/optiga-nbt-lib-swift/issues).

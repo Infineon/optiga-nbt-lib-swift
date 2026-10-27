@@ -7,7 +7,7 @@
 import PackageDescription
 
 let packageName = "InfineonNbt"
-let packageVersion = "1.1.2"
+let packageVersion = "1.1.3"
 
 let package = Package(
     name: packageName,

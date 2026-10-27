@@ -30,7 +30,7 @@ This record allows passing x509 certificate in the payload. The x509 certificate
                                 decoder: BrandProtectionRecordPayloadDecoder())
     ```
 
-2. Use the brand protection record
+1. Use the brand protection record
 
     ```swift
     do {

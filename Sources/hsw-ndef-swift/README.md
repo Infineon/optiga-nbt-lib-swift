@@ -39,7 +39,7 @@ This Swift library provides support to build and parse the NDEF messages, with s
     import InfineonNdef
     ```
 
-2. Encode the URI record
+1. Encode the URI record
 
     ```swift
     do {
@@ -53,7 +53,7 @@ This Swift library provides support to build and parse the NDEF messages, with s
     } catch {}
     ```
 
-3. Encode the NDEF message
+1. Encode the NDEF message
 
     ```swift
     // Encode the records into an NDEF message
@@ -62,14 +62,14 @@ This Swift library provides support to build and parse the NDEF messages, with s
     let messageBytesWithLength = try NdefManager.encode(message: message, includeLength: true)
     ```
 
-4. Decode the NDEF message
+1. Decode the NDEF message
 
     ```swift
     // Decode the encoded NDEF message
     let decodedMessage = try NdefManager.decode(data: messageBytes)
     ```
 
-5. Decode the URI record
+1. Decode the URI record
 
     ```swift
     // Decode the records

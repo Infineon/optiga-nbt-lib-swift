@@ -21,7 +21,7 @@ The below example illustrates the usage for getting subdata bytes from a byte ar
     import InfineonUtils
     ```
 
-2. Sample usage of Utils method
+1. Sample usage of Utils method
 
     ```swift
     do {

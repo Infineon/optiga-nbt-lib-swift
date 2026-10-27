@@ -31,7 +31,7 @@ This library can be used with any communication channel, such as NFC and PCSC.
     import InfineonLogger
     ```
 
-2. Create a logger
+1. Create a logger
 
     Refer to `hsw-logger-swift/README.md` example section for creating a logger.
 
@@ -44,7 +44,7 @@ This library can be used with any communication channel, such as NFC and PCSC.
     exampleLogger.setLogLevel(loggerLevel: LoggerLevel.info)
     ```
 
-3. Create a communication channel
+1. Create a communication channel
 
     Refer to `hsw-channel-swift/README.md` example section for creating a communication channel interface.
 
@@ -62,7 +62,7 @@ This library can be used with any communication channel, such as NFC and PCSC.
     let apduChannel =  ApduChannel(channel : ctkChannel, logger: exampleLogger)
     ```
 
-4. Initialize the command set
+1. Initialize the command set
 
     ```swift
     // Create an instance of the NBT APDU command set
@@ -72,7 +72,7 @@ This library can be used with any communication channel, such as NFC and PCSC.
     _ = try await apduChannel.connect(data: nil)
     ```
 
-5. Communicate with the OPTIGA™ Authenticate NBT
+1. Communicate with the OPTIGA™ Authenticate NBT
 
     ```swift
     do {
